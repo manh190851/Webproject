@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Webproject.Data.EntityModel
 {
-    public class ApplicationUser : IdentityUser<Guid>
+    public class AppUser : IdentityUser<Guid>
     {
         public string fullname { get; set; }
         public string gender { get; set; }

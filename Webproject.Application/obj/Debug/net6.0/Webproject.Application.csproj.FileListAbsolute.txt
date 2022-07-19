@@ -1,0 +1,12 @@
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\bin\Debug\net6.0\Webproject.Application.deps.json
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\bin\Debug\net6.0\Webproject.Application.dll
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\bin\Debug\net6.0\Webproject.Application.pdb
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\Webproject.Application.csproj.AssemblyReference.cache
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\Webproject.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\Webproject.Application.AssemblyInfoInputs.cache
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\Webproject.Application.AssemblyInfo.cs
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\Webproject.Application.csproj.CoreCompileInputs.cache
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\Webproject.Application.dll
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\refint\Webproject.Application.dll
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\Webproject.Application.pdb
+C:\Users\MANH\source\repos\Webproject\Webproject.Application\obj\Debug\net6.0\ref\Webproject.Application.dll

@@ -1,0 +1,14 @@
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\bin\Debug\net6.0\Webproject.Data.deps.json
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\bin\Debug\net6.0\Webproject.Data.runtimeconfig.json
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\bin\Debug\net6.0\Webproject.Data.dll
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\bin\Debug\net6.0\Webproject.Data.pdb
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\Webproject.Data.csproj.AssemblyReference.cache
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\Webproject.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\Webproject.Data.AssemblyInfoInputs.cache
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\Webproject.Data.AssemblyInfo.cs
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\Webproject.Data.csproj.CoreCompileInputs.cache
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\Webproject.Data.dll
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\refint\Webproject.Data.dll
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\Webproject.Data.pdb
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\Webproject.Data.genruntimeconfig.cache
+C:\Users\MANH\source\repos\Webproject\Webproject.Data\obj\Debug\net6.0\ref\Webproject.Data.dll
