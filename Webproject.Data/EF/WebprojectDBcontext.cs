@@ -17,6 +17,12 @@ namespace Webproject.Data.EF
         {
         }
 
+        public DbSet<Post> Posts { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Reaction> Reactions { get; set; }
+        public DbSet<Reply> Replies { get; set; }
+        public DbSet<Share> Shares { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             // Fluent API
@@ -28,6 +34,12 @@ namespace Webproject.Data.EF
             builder.Entity<IdentityUserLogin<Guid>>().ToTable("AppUserLogins").HasKey(m => m.UserId);
             builder.Entity<IdentityRoleClaim<Guid>>().ToTable("AppRoleClaims");
             builder.Entity<IdentityUserToken<Guid>>().ToTable("AppUserToken").HasKey(m => m.UserId);
+
+            builder.ApplyConfiguration(new PostConfiguration()); //Post
+            builder.ApplyConfiguration(new CommentConfiguration()); //Comment
+            builder.ApplyConfiguration(new ReplyConfiguration()); //Reply
+            builder.ApplyConfiguration(new ReactionConfiguration()); //Reaction
+            builder.ApplyConfiguration(new ShareConfiguration()); //Share
         }
     }
 }

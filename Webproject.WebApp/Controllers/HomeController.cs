@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Webproject.Data.EntityModel;
 using Webproject.WebApp.Models;
 
 namespace Webproject.WebApp.Controllers
