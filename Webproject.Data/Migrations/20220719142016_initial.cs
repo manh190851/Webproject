@@ -1,5 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Webproject.Data.EntityModel;
+using Webproject.Data.Enum;
 
 #nullable disable
 
@@ -85,13 +87,13 @@ namespace Webproject.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    fullname = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
-                    gender = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Fullname = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    Gender = table.Column<Gender>(type: "nvarchar(10)", nullable: false),
                     DOB = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    phonenumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    nation = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    city = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    imageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phonenumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Nation = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    City = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),

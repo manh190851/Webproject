@@ -9,7 +9,7 @@ using Webproject.Data.EntityModel;
 
 namespace Webproject.Data.Configuration
 {
-    internal class AppRoleConfiguration : IEntityTypeConfiguration<AppRole>
+    public class AppRoleConfiguration : IEntityTypeConfiguration<AppRole>
     {
         public void Configure(EntityTypeBuilder<AppRole> builder)
         {

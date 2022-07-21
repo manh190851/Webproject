@@ -15,17 +15,19 @@ namespace Webproject.Data.Configuration
         {
             builder.ToTable("AppUsers");
 
-            builder.Property(m => m.fullname).IsRequired().HasMaxLength(100);
+            builder.Property(m => m.Fullname).IsRequired().HasMaxLength(100);
 
-            builder.Property(m => m.gender).IsRequired();
+            builder.Property(m => m.Gender).IsRequired();
 
             builder.Property(m => m.DOB).IsRequired();
 
-            builder.Property(m => m.nation).IsRequired().HasMaxLength(50);
+            builder.Property(m => m.Nation).IsRequired().HasMaxLength(50);
 
-            builder.Property(m => m.city).IsRequired().HasMaxLength(50);
+            builder.Property(m => m.City).IsRequired().HasMaxLength(50);
 
-            builder.Property(m => m.imageUrl);
+            builder.Property(m => m.ImageUrl);
+
+           
         }
     }
 }
