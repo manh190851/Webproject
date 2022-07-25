@@ -13,7 +13,7 @@ namespace Webproject.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Comment> builder)
         {
-            builder.ToTable("Comment");
+            builder.ToTable("Comments");
 
             builder.HasKey(m => m.ComId);
 

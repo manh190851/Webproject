@@ -22,7 +22,10 @@ namespace Webproject.Data.EF
         public DbSet<Reaction> Reactions { get; set; }
         public DbSet<Reply> Replies { get; set; }
         public DbSet<Share> Shares { get; set; }
-
+        public DbSet<Friend> Friends { get; set; }
+        public DbSet<Follow> Follows { get; set; }
+        public DbSet<Message> Messages { get; set; }
+    
         protected override void OnModelCreating(ModelBuilder builder)
         {
             // Fluent API
@@ -40,6 +43,9 @@ namespace Webproject.Data.EF
             builder.ApplyConfiguration(new ReplyConfiguration()); //Reply
             builder.ApplyConfiguration(new ReactionConfiguration()); //Reaction
             builder.ApplyConfiguration(new ShareConfiguration()); //Share
+            builder.ApplyConfiguration(new FollowConfiguration()); //Follow
+            builder.ApplyConfiguration(new FriendConfiguration()); //Friend
+            builder.ApplyConfiguration(new MessageConfiguration()); //Message
         }
     }
 }

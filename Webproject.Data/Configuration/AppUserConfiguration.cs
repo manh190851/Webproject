@@ -26,8 +26,7 @@ namespace Webproject.Data.Configuration
             builder.Property(m => m.City).IsRequired().HasMaxLength(50);
 
             builder.Property(m => m.ImageUrl);
-
-           
+            builder.Property(m => m.LastLogin);
         }
     }
 }

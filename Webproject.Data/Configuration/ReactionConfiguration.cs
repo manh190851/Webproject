@@ -13,7 +13,7 @@ namespace Webproject.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Reaction> builder)
         {
-            builder.ToTable("Reaction");
+            builder.ToTable("Reactions");
 
             builder.HasKey(m => m.ReacId);
 

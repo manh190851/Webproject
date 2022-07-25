@@ -13,7 +13,7 @@ namespace Webproject.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<AppRole> builder)
         {
-            builder.ToTable("AppRole");
+            builder.ToTable("AppRoles");
 
             builder.Property(m => m.description);
         }

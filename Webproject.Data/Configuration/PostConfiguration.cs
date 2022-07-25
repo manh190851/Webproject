@@ -14,7 +14,7 @@ namespace Webproject.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Post> builder)
         {
-            builder.ToTable("Post");
+            builder.ToTable("Posts");
 
             builder.HasKey(m => m.PostId);
 
