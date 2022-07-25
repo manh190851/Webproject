@@ -78,7 +78,7 @@ namespace Webproject.Data.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Url = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Created = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValue: new DateTime(2022, 7, 21, 15, 27, 41, 56, DateTimeKind.Local).AddTicks(4011)),
+                    Created = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false, defaultValue: 0),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false, defaultValue: false),
                     ShareCount = table.Column<long>(type: "bigint", nullable: false, defaultValue: 0L),

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Webproject.Data.EF;
 
@@ -11,9 +12,10 @@ using Webproject.Data.EF;
 namespace Webproject.Data.Migrations
 {
     [DbContext(typeof(WebprojectDBcontext))]
-    partial class WebprojectDBcontextModelSnapshot : ModelSnapshot
+    [Migration("20220725080905_initial3")]
+    partial class initial3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

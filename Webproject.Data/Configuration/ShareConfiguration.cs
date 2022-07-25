@@ -13,7 +13,7 @@ namespace Webproject.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Share> builder)
         {
-            builder.ToTable("Share");
+            builder.ToTable("Shares");
 
             builder.HasKey(m => m.ShareId);
 

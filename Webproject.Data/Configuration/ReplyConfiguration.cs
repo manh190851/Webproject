@@ -13,7 +13,7 @@ namespace Webproject.Data.Configuration
     {
         public void Configure(EntityTypeBuilder<Reply> builder)
         {
-            builder.ToTable("Reply");
+            builder.ToTable("Replys");
 
             builder.HasKey(m => m.ReplyId);
 
