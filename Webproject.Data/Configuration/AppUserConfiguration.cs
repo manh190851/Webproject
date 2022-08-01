@@ -25,8 +25,8 @@ namespace Webproject.Data.Configuration
 
             builder.Property(m => m.City).IsRequired().HasMaxLength(50);
 
-            builder.Property(m => m.ImageUrl);
-            builder.Property(m => m.LastLogin);
+            builder.Property(m => m.ImageUrl).HasDefaultValue("https://icon-library.com/images/icon-user/icon-user-15.jpg");
+            builder.Property(m => m.LastLogin).IsRequired();
         }
     }
 }

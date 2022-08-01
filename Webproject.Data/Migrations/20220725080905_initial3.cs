@@ -171,10 +171,7 @@ namespace Webproject.Data.Migrations
                 table: "Posts",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 7, 25, 15, 9, 5, 66, DateTimeKind.Local).AddTicks(1566),
-                oldClrType: typeof(DateTime),
-                oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 7, 21, 15, 27, 41, 56, DateTimeKind.Local).AddTicks(4011));
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Shares",
@@ -575,10 +572,7 @@ namespace Webproject.Data.Migrations
                 table: "Post",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 7, 21, 15, 27, 41, 56, DateTimeKind.Local).AddTicks(4011),
-                oldClrType: typeof(DateTime),
-                oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 7, 25, 15, 9, 5, 66, DateTimeKind.Local).AddTicks(1566));
+                defaultValue: new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified));
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Share",

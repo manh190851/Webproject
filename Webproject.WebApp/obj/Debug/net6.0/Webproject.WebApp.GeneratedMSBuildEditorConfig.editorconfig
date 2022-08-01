@@ -15,6 +15,26 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\MANH\source\repos\Webproject\Webproject.WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/MANH/source/repos/Webproject/Webproject.WebApp/Views/AppRoles/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MANH/source/repos/Webproject/Webproject.WebApp/Views/AppRoles/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MANH/source/repos/Webproject/Webproject.WebApp/Views/AppRoles/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MANH/source/repos/Webproject/Webproject.WebApp/Views/AppRoles/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MANH/source/repos/Webproject/Webproject.WebApp/Views/AppRoles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/MANH/source/repos/Webproject/Webproject.WebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

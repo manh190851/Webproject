@@ -19,7 +19,7 @@ namespace Webproject.Data.Configuration
             builder.HasKey(m => m.PostId);
 
             builder.Property(m => m.Title).IsRequired();
-            builder.Property(m => m.Created).HasDefaultValue(DateTime.Now);
+            builder.Property(m => m.Created).IsRequired();
             builder.Property(m => m.Status).HasDefaultValue(PostStatus.Public);
             builder.Property(m => m.Url);
             builder.Property(m => m.IsDeleted).HasDefaultValue(false);
