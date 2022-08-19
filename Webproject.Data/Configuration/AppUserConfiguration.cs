@@ -19,6 +19,8 @@ namespace Webproject.Data.Configuration
 
             builder.Property(m => m.Gender).IsRequired();
 
+            builder.Property(m => m.Phone).IsRequired();
+
             builder.Property(m => m.DOB).IsRequired();
 
             builder.Property(m => m.Nation).IsRequired().HasMaxLength(50);

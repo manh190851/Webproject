@@ -11,9 +11,9 @@ using Webproject.Data.EntityModel;
 
 namespace Webproject.Data.EF
 {
-    public class WebprojectDBcontext : IdentityDbContext<AppUser, AppRole, Guid>
+    public class WebprojectDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
-        public WebprojectDBcontext(DbContextOptions options) : base(options)
+        public WebprojectDbContext(DbContextOptions options) : base(options)
         {
         }
 

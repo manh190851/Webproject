@@ -11,7 +11,7 @@ using Webproject.Data.EF;
 
 namespace Webproject.Data.Migrations
 {
-    [DbContext(typeof(WebprojectDBcontext))]
+    [DbContext(typeof(WebprojectDbContext))]
     [Migration("20220719142016_initial")]
     partial class initial
     {

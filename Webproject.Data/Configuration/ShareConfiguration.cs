@@ -21,7 +21,7 @@ namespace Webproject.Data.Configuration
             builder.Property(m => m.Created);
 
             builder.HasOne(m => m.Users).WithMany(m => m.Shares).HasForeignKey(m => m.UserId);
-            builder.HasOne(m => m.Post).WithMany(m => m.Shares).HasForeignKey(m => m.PostId);
+            builder.HasOne(m => m.Post).WithMany(m => m.Shares).HasForeignKey(m => m.PostId).OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

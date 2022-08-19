@@ -9,19 +9,21 @@ using System.Threading.Tasks;
 
 namespace Webproject.Data.EF
 {
-    public class WebprojectDBcontextFactory : IDesignTimeDbContextFactory<WebprojectDBcontext>
+    public class WebprojectDbContextFactory : IDesignTimeDbContextFactory<WebprojectDbContext>
     {
-        public WebprojectDBcontext CreateDbContext(string[] args)
+        public WebprojectDbContext CreateDbContext(string[] args)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json")
                 .Build();
 
-            var optionsBuilder = new DbContextOptionsBuilder<WebprojectDBcontext>();
-            optionsBuilder.UseSqlServer("Data Source=blog.db");
+            var connectionstring = configuration.GetConnectionString("WebprojecDbContext");
 
-            return new WebprojectDBcontext(optionsBuilder.Options);
+            var optionsBuilder = new DbContextOptionsBuilder<WebprojectDbContext>();
+            optionsBuilder.UseSqlServer(connectionstring);
+
+            return new WebprojectDbContext(optionsBuilder.Options);
         }
     }
 }

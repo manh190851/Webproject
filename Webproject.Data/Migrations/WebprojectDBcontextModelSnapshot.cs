@@ -10,8 +10,8 @@ using Webproject.Data.EF;
 
 namespace Webproject.Data.Migrations
 {
-    [DbContext(typeof(WebprojectDBcontext))]
-    partial class WebprojectDBcontextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(WebprojectDbContext))]
+    partial class WebprojectDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -231,15 +231,15 @@ namespace Webproject.Data.Migrations
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Phonenumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");

@@ -12,9 +12,9 @@ namespace Webproject.WebApp.Controllers
 {
     public class AppRolesController : Controller
     {
-        private readonly WebprojectDBcontext _context;
+        private readonly WebprojectDbContext _context;
 
-        public AppRolesController(WebprojectDBcontext context)
+        public AppRolesController(WebprojectDbContext context)
         {
             _context = context;
         }
@@ -24,7 +24,7 @@ namespace Webproject.WebApp.Controllers
         {
               return _context.Roles != null ? 
                           View(await _context.Roles.ToListAsync()) :
-                          Problem("Entity set 'WebprojectDBcontext.Roles'  is null.");
+                          Problem("Entity set 'WebprojectDbContext.Roles'  is null.");
         }
 
         // GET: AppRoles/Details/5

@@ -90,7 +90,7 @@ namespace Webproject.Data.Migrations
                     Fullname = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Gender = table.Column<Gender>(type: "nvarchar(10)", nullable: false),
                     DOB = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Phonenumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Nation = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     City = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
