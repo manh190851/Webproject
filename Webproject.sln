@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webproject.WebApp", "Webproject.WebApp\Webproject.WebApp.csproj", "{9E2A8078-DFED-4042-8A33-A93ABE58C626}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webproject.WebApp", "Webproject.WebApp\Webproject.WebApp.csproj", "{9E2A8078-DFED-4042-8A33-A93ABE58C626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webproject.Data", "Webproject.Data\Webproject.Data.csproj", "{48763117-F691-43A0-A952-13324E747C9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Webproject.Data", "Webproject.Data\Webproject.Data.csproj", "{48763117-F691-43A0-A952-13324E747C9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webproject.Application", "Webproject.Application\Webproject.Application.csproj", "{45FD8F4C-0EE7-499C-A1B6-50EEAEF2620A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webproject.Layer", "Webproject.Layer\Webproject.Layer.csproj", "{2F865621-8637-431B-A6E6-84009E934431}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{48763117-F691-43A0-A952-13324E747C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48763117-F691-43A0-A952-13324E747C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48763117-F691-43A0-A952-13324E747C9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{45FD8F4C-0EE7-499C-A1B6-50EEAEF2620A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45FD8F4C-0EE7-499C-A1B6-50EEAEF2620A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45FD8F4C-0EE7-499C-A1B6-50EEAEF2620A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45FD8F4C-0EE7-499C-A1B6-50EEAEF2620A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F865621-8637-431B-A6E6-84009E934431}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F865621-8637-431B-A6E6-84009E934431}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F865621-8637-431B-A6E6-84009E934431}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F865621-8637-431B-A6E6-84009E934431}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
