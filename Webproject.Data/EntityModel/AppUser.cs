@@ -13,10 +13,10 @@ namespace Webproject.Data.EntityModel
         public string Fullname { get; set; }
         public Gender Gender { get; set; }
         public DateTime DOB { get; set; }
-        public string Phonenumber { get; set; }
+        public string Phone { get; set; }
         public string Nation { get; set; }
         public string City { get; set; }
-        public string ImageUrl { get; set; }
+        public string? ImageUrl { get; set; }
         public DateTime LastLogin { get; set; }
         public List<Friend>? RequestFriends { get; set; }
         public List<Friend>? AcceptFriends { get; set; }

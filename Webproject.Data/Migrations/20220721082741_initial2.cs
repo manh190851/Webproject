@@ -114,7 +114,7 @@ namespace Webproject.Data.Migrations
                         column: x => x.UserId,
                         principalTable: "AppUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Comment_Post_PostId",
                         column: x => x.PostId,
@@ -142,7 +142,7 @@ namespace Webproject.Data.Migrations
                         column: x => x.UserId,
                         principalTable: "AppUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Share_Post_PostId",
                         column: x => x.PostId,
@@ -170,7 +170,7 @@ namespace Webproject.Data.Migrations
                         column: x => x.UserId,
                         principalTable: "AppUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Reply_Comment_ComId",
                         column: x => x.ComId,
@@ -200,13 +200,13 @@ namespace Webproject.Data.Migrations
                         column: x => x.UserId,
                         principalTable: "AppUsers",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Reaction_Comment_ComId",
                         column: x => x.ComId,
                         principalTable: "Comment",
                         principalColumn: "ComId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_Reaction_Post_PostId",
                         column: x => x.PostId,
@@ -218,7 +218,7 @@ namespace Webproject.Data.Migrations
                         column: x => x.ReplyId,
                         principalTable: "Reply",
                         principalColumn: "ReplyId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(

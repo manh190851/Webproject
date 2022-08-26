@@ -10,8 +10,8 @@ using Webproject.Data.EF;
 
 namespace Webproject.Data.Migrations
 {
-    [DbContext(typeof(WebprojectDBcontext))]
-    partial class WebprojectDBcontextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(WebprojectDbContext))]
+    partial class WebprojectDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -119,6 +119,32 @@ namespace Webproject.Data.Migrations
                     b.ToTable("AppUserToken", (string)null);
                 });
 
+            modelBuilder.Entity("Webproject.Data.EntityModel.AccountImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<long>("AccId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AccId");
+
+                    b.ToTable("AccountImage", (string)null);
+                });
+
             modelBuilder.Entity("Webproject.Data.EntityModel.AppRole", b =>
                 {
                     b.Property<Guid>("Id")
@@ -178,8 +204,9 @@ namespace Webproject.Data.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("nvarchar(max)")
+                        .HasDefaultValue("https://icon-library.com/images/icon-user/icon-user-15.jpg");
 
                     b.Property<DateTime>("LastLogin")
                         .HasColumnType("datetime2");
@@ -204,15 +231,15 @@ namespace Webproject.Data.Migrations
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Phonenumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
@@ -226,6 +253,27 @@ namespace Webproject.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AppUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Webproject.Data.EntityModel.Category", b =>
+                {
+                    b.Property<int>("CateId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CateId"), 1L, 1);
+
+                    b.Property<string>("CateName")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("CateId");
+
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("Webproject.Data.EntityModel.Comment", b =>
@@ -314,6 +362,79 @@ namespace Webproject.Data.Migrations
                     b.ToTable("Friends", (string)null);
                 });
 
+            modelBuilder.Entity("Webproject.Data.EntityModel.Game", b =>
+                {
+                    b.Property<int>("GameId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("GameId"), 1L, 1);
+
+                    b.Property<int>("CateId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GameName")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("GameId");
+
+                    b.HasIndex("CateId");
+
+                    b.ToTable("Games", (string)null);
+                });
+
+            modelBuilder.Entity("Webproject.Data.EntityModel.GameAccount", b =>
+                {
+                    b.Property<long>("AccId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("AccId"), 1L, 1);
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GameId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("SalerId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("_Account")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("_Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AccId");
+
+                    b.HasIndex("GameId");
+
+                    b.HasIndex("SalerId");
+
+                    b.ToTable("GameAccount", (string)null);
+                });
+
             modelBuilder.Entity("Webproject.Data.EntityModel.Message", b =>
                 {
                     b.Property<long>("MessageId")
@@ -353,9 +474,7 @@ namespace Webproject.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("PostId"), 1L, 1);
 
                     b.Property<DateTime>("Created")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 7, 25, 15, 9, 5, 66, DateTimeKind.Local).AddTicks(1566));
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
@@ -490,6 +609,17 @@ namespace Webproject.Data.Migrations
                     b.ToTable("Shares", (string)null);
                 });
 
+            modelBuilder.Entity("Webproject.Data.EntityModel.AccountImage", b =>
+                {
+                    b.HasOne("Webproject.Data.EntityModel.GameAccount", "Account")
+                        .WithMany("Images")
+                        .HasForeignKey("AccId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Account");
+                });
+
             modelBuilder.Entity("Webproject.Data.EntityModel.Comment", b =>
                 {
                     b.HasOne("Webproject.Data.EntityModel.Post", "Post")
@@ -545,6 +675,36 @@ namespace Webproject.Data.Migrations
                     b.Navigation("AcceptUser");
 
                     b.Navigation("RequestUser");
+                });
+
+            modelBuilder.Entity("Webproject.Data.EntityModel.Game", b =>
+                {
+                    b.HasOne("Webproject.Data.EntityModel.Category", "Category")
+                        .WithMany("Games")
+                        .HasForeignKey("CateId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Webproject.Data.EntityModel.GameAccount", b =>
+                {
+                    b.HasOne("Webproject.Data.EntityModel.Game", "Game")
+                        .WithMany("Accounts")
+                        .HasForeignKey("GameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Webproject.Data.EntityModel.AppUser", "Saler")
+                        .WithMany()
+                        .HasForeignKey("SalerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Game");
+
+                    b.Navigation("Saler");
                 });
 
             modelBuilder.Entity("Webproject.Data.EntityModel.Message", b =>
@@ -675,11 +835,26 @@ namespace Webproject.Data.Migrations
                     b.Navigation("Shares");
                 });
 
+            modelBuilder.Entity("Webproject.Data.EntityModel.Category", b =>
+                {
+                    b.Navigation("Games");
+                });
+
             modelBuilder.Entity("Webproject.Data.EntityModel.Comment", b =>
                 {
                     b.Navigation("Reactions");
 
                     b.Navigation("Replys");
+                });
+
+            modelBuilder.Entity("Webproject.Data.EntityModel.Game", b =>
+                {
+                    b.Navigation("Accounts");
+                });
+
+            modelBuilder.Entity("Webproject.Data.EntityModel.GameAccount", b =>
+                {
+                    b.Navigation("Images");
                 });
 
             modelBuilder.Entity("Webproject.Data.EntityModel.Post", b =>

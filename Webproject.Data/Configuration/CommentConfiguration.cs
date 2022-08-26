@@ -20,8 +20,6 @@ namespace Webproject.Data.Configuration
             builder.Property(m => m.Content).IsRequired();
             builder.Property(m => m.Created).IsRequired();
 
-            builder.HasMany(m => m.Replys).WithOne(m => m.Comment);
-            builder.HasMany(m => m.Reactions).WithOne(m => m.Comment);
             builder.HasOne(m => m.Post).WithMany(m => m.Comments).HasForeignKey(m => m.PostId);
             builder.HasOne(m => m.User).WithMany(m => m.Comments).HasForeignKey(m => m.UserId);
         }

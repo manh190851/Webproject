@@ -11,9 +11,9 @@ using Webproject.Data.EntityModel;
 
 namespace Webproject.Data.EF
 {
-    public class WebprojectDBcontext : IdentityDbContext<AppUser, AppRole, Guid>
+    public class WebprojectDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
-        public WebprojectDBcontext(DbContextOptions options) : base(options)
+        public WebprojectDbContext(DbContextOptions options) : base(options)
         {
         }
 
@@ -25,6 +25,10 @@ namespace Webproject.Data.EF
         public DbSet<Friend> Friends { get; set; }
         public DbSet<Follow> Follows { get; set; }
         public DbSet<Message> Messages { get; set; }
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Game> Games { get; set; }
+        public DbSet<GameAccount> GameAccounts { get; set;}
+        public DbSet<AccountImage> AccountImages { get; set; }
     
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -46,6 +50,10 @@ namespace Webproject.Data.EF
             builder.ApplyConfiguration(new FollowConfiguration()); //Follow
             builder.ApplyConfiguration(new FriendConfiguration()); //Friend
             builder.ApplyConfiguration(new MessageConfiguration()); //Message
+            builder.ApplyConfiguration(new CategoryConfiguration()); //Category
+            builder.ApplyConfiguration(new GameConfiguration()); //Game
+            builder.ApplyConfiguration(new GameAccountConfiguration()); //GameAccount
+            builder.ApplyConfiguration(new AccountImageConfiguration()); //AccountImage
         }
     }
 }
